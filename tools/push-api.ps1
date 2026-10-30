@@ -178,6 +178,7 @@ if ($empty) { Step 'empty repo: first commit will create the branch' }
 # ---------------------------------------------------------------- manifest
 $Manifest = @(
     'README.md',
+    'PUBLISH.md',
     'LICENSE',
     '.gitignore',
     'default.project.json',
@@ -195,13 +196,26 @@ $Manifest = @(
     'docs/entities.md',
     'docs/assets-manifest.md',
     'docs/field-notes.md',
+    'docs/asset-inventory.md',
     'assets.lua',
     'assets-report.txt',
+    'models/README.md',
     'models/FigureRig.build.lua',
+    'models/RushTextures.build.lua',
+    'models/EntityRigs.build.lua',
+    'models/ALL-IN-ONE.build.lua',
+    'models/SHOP-PACK.build.lua',
+    'models/ElGoblino.build.lua',
+    'models/Bob.build.lua',
+    'models/Timothy.build.lua',
+    'models/FigureWelded.build.lua',
+    'models/FigureFull.build.lua',
+    'models/Figure2.build.lua',
     'tools/push-api.ps1',
     'tools/push-to-github.ps1',
     'tools/build.ps1',
     'tools/extract-assets.ps1',
+    'tools/rig-to-lua.ps1',
     'tools/fetch-and-extract.ps1'
 )
 
