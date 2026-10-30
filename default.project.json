@@ -1,0 +1,30 @@
+{
+  "name": "doors-texture-chaos",
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "DoorsTextureChaos": {
+        "$path": "src/ReplicatedStorage/DoorsTextureChaos"
+      }
+    },
+
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      "TextureChaosServer": {
+        "$path": "src/ServerScriptService/TextureChaosServer.server.lua"
+      }
+    },
+
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+      "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
+        "ChaosHud": {
+          "$path": "src/StarterPlayer/ChaosHud.client.lua"
+        }
+      }
+    }
+  }
+}
