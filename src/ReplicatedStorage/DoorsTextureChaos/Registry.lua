@@ -6,7 +6,7 @@
 	模型命名可以写 "Rush" / "rush" / "Rush_New" / "A-60" / "a60"，都能对上。
 
 	注意：这里只有名字，没有任何美术资源。
-	模型需要你自己导入到 Workspace.Monsters 下（见 docs/获取建模.md）。
+	模型需要你自己导入到 Workspace.Monsters 下（见 docs/models.md）。
 --]]
 
 local Registry = {}
