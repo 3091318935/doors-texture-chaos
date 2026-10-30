@@ -1,8 +1,120 @@
 ﻿
 ========================================================================
-FILE: gaz + gloombats.rbxmx.part   (2.6 MB)
+FILE: figure 1st appear.rbxlx   (12.4 MB)
 ========================================================================
-  READ FAILED: The process cannot access the file 'D:\DSH ROBLOX\doors_downloads\gaz + gloombats.rbxmx.part' because it is being used by another process.
+
+  [CHARACTER] FigureRig   parts=32 (with mesh 31)  decals=0
+      part  Torso                    mesh=rbxassetid://10494023258   tex=
+      part  RibCage                  mesh=rbxassetid://10493991658   tex=
+      part  LeftMiddleLeg            mesh=rbxassetid://10494026105   tex=
+      part  Blister                  mesh=rbxassetid://10494027006   tex=
+      part  Root                     mesh=                           tex=
+      part  Head                     mesh=rbxassetid://10494022570   tex=
+      part  Blisters                 mesh=rbxassetid://10494023013   tex=
+      part  Gums                     mesh=rbxassetid://10494022876   tex=
+      part  Veins                    mesh=rbxassetid://10494023182   tex=
+      part  Teeth                    mesh=rbxassetid://10494022710   tex=
+      part  LeftUpperArm             mesh=rbxassetid://10494024471   tex=
+      part  RightUpperArm            mesh=rbxassetid://10494024735   tex=
+      part  Blister                  mesh=rbxassetid://10494023534   tex=
+      part  RightUpperLeg            mesh=rbxassetid://10494025881   tex=
+      part  LeftUpperLeg             mesh=rbxassetid://10494025735   tex=
+      part  Blister                  mesh=rbxassetid://10494025608   tex=
+      part  LeftHand                 mesh=rbxassetid://10494023744   tex=
+      part  LeftLowerArm             mesh=rbxassetid://10494023932   tex=
+      part  Blister                  mesh=rbxassetid://10494024108   tex=
+      part  LeftMiddleArm            mesh=rbxassetid://10494024216   tex=
+      part  Blister                  mesh=rbxassetid://10494024341   tex=
+      part  RightHand                mesh=rbxassetid://10494025102   tex=
+      part  RightLowerArm            mesh=rbxassetid://10494024975   tex=
+      part  Blister                  mesh=rbxassetid://10494025231   tex=
+      part  RightMiddleArm           mesh=rbxassetid://10494024868   tex=
+      part  RightFoot                mesh=rbxassetid://10494026632   tex=
+      part  RightLowerLeg            mesh=rbxassetid://10494026427   tex=
+      part  Blister                  mesh=rbxassetid://10494027198   tex=
+      part  RightMiddleLeg           mesh=rbxassetid://10494025972   tex=
+      part  Blister                  mesh=rbxassetid://10494027087   tex=
+      part  LeftFoot                 mesh=rbxassetid://10494026794   tex=
+      part  LeftLowerLeg             mesh=rbxassetid://10494026266   tex=
+
+  [CHARACTER] PalaCraft7239   parts=16 (with mesh 0)  decals=4
+      part  Head                     mesh=                           tex=
+      part  LeftLowerArm             mesh=                           tex=
+      part  RightLowerArm            mesh=                           tex=
+      part  LeftUpperArm             mesh=                           tex=
+      part  RightUpperArm            mesh=                           tex=
+      part  LowerTorso               mesh=                           tex=
+      part  LeftLowerLeg             mesh=                           tex=
+      part  LeftUpperLeg             mesh=                           tex=
+      part  LeftFoot                 mesh=                           tex=
+      part  RightFoot                mesh=                           tex=
+      part  RightLowerLeg            mesh=                           tex=
+      part  RightUpperLeg            mesh=                           tex=
+      part  UpperTorso               mesh=                           tex=
+      part  LeftHand                 mesh=                           tex=
+      part  RightHand                mesh=                           tex=
+      part  Handle                   mesh=                           tex=
+      decal face                     tex=
+      decal EyesTexture              tex=rbxassetid://6439010561
+      decal TryTexture               tex=rbxassetid://8829361602
+      decal TryTexture2              tex=rbxassetid://7807728404
+
+  [CHARACTER] PalaCraft7239   parts=18 (with mesh 0)  decals=1
+      part  RightFoot                mesh=                           tex=
+      part  UpperTorso               mesh=                           tex=
+      part  LowerTorso               mesh=                           tex=
+      part  RightUpperArm            mesh=                           tex=
+      part  RightLowerArm            mesh=                           tex=
+      part  RightHand                mesh=                           tex=
+      part  Handle                   mesh=                           tex=
+      part  LeftUpperArm             mesh=                           tex=
+      part  LeftLowerArm             mesh=                           tex=
+      part  LeftHand                 mesh=                           tex=
+      part  LeftUpperLeg             mesh=                           tex=
+      part  LeftLowerLeg             mesh=                           tex=
+      part  LeftFoot                 mesh=                           tex=
+      part  RightUpperLeg            mesh=                           tex=
+      part  RightLowerLeg            mesh=                           tex=
+      part  Handle                   mesh=                           tex=
+      part  Handle                   mesh=                           tex=
+      part  Head                     mesh=                           tex=
+      decal face                     tex=
+
+  [CHARACTER] ViewModelOld   parts=10 (with mesh 0)  decals=0
+      part  LeftHand                 mesh=                           tex=
+      part  LeftLowerArm             mesh=                           tex=
+      part  FakeHand                 mesh=                           tex=
+      part  LeftUpperArm             mesh=                           tex=
+      part  RightHand                mesh=                           tex=
+      part  RightLowerArm            mesh=                           tex=
+      part  FakeHand                 mesh=                           tex=
+      part  RightUpperArm            mesh=                           tex=
+      part  UpperTorso               mesh=                           tex=
+      part  LowerTorso               mesh=                           tex=
+
+  [CHARACTER] ViewModel   parts=14 (with mesh 0)  decals=0
+      part  LeftHand                 mesh=                           tex=
+      part  LeftLowerArm             mesh=                           tex=
+      part  LeftUpperArm             mesh=                           tex=
+      part  RightHand                mesh=                           tex=
+      part  RightLowerArm            mesh=                           tex=
+      part  RightUpperArm            mesh=                           tex=
+      part  UpperTorso               mesh=                           tex=
+      part  LeftFoot                 mesh=                           tex=
+      part  LeftLowerLeg             mesh=                           tex=
+      part  LeftUpperLeg             mesh=                           tex=
+      part  RightFoot                mesh=                           tex=
+      part  RightLowerLeg            mesh=                           tex=
+      part  RightUpperLeg            mesh=                           tex=
+      part  LowerTorso               mesh=                           tex=
+
+  -> 497 model block(s), 5 character rig(s)
+
+========================================================================
+FILE: gaz + gloombats.rbxmx   (6.9 MB)
+========================================================================
+
+  -> 506 model block(s), 0 character rig(s)
 
 ========================================================================
 FILE: halt floor 2.rbxmx   (2.8 MB)
@@ -11,11 +123,94 @@ FILE: halt floor 2.rbxmx   (2.8 MB)
   -> 192 model block(s), 0 character rig(s)
 
 ========================================================================
-FILE: new halt floor 1.rbxlx   (3.3 MB)
+FILE: jeff f1.rbxlx.part   (0 MB)
 ========================================================================
-  INCOMPLETE FILE: truncated download
+  READ FAILED: The process cannot access the file 'D:\DSH ROBLOX\doors_downloads\jeff f1.rbxlx.part' because it is being used by another process.
 
-  -> 456 model block(s), 0 character rig(s)
+========================================================================
+FILE: new halt floor 1.rbxlx   (8.5 MB)
+========================================================================
+
+  [CHARACTER] PalaCraft7239   parts=16 (with mesh 0)  decals=1
+      part  Head                     mesh=                           tex=
+      part  LeftLowerArm             mesh=                           tex=
+      part  RightLowerArm            mesh=                           tex=
+      part  LeftUpperArm             mesh=                           tex=
+      part  RightUpperArm            mesh=                           tex=
+      part  LowerTorso               mesh=                           tex=
+      part  LeftLowerLeg             mesh=                           tex=
+      part  LeftUpperLeg             mesh=                           tex=
+      part  LeftFoot                 mesh=                           tex=
+      part  RightFoot                mesh=                           tex=
+      part  RightLowerLeg            mesh=                           tex=
+      part  RightUpperLeg            mesh=                           tex=
+      part  UpperTorso               mesh=                           tex=
+      part  LeftHand                 mesh=                           tex=
+      part  RightHand                mesh=                           tex=
+      part  Handle                   mesh=                           tex=
+      decal face                     tex=
+
+  [CHARACTER] RushMoving   parts=0 (with mesh 0)  decals=3
+      decal EyesTexture              tex=rbxassetid://6439010561
+      decal TryTexture               tex=rbxassetid://8829361602
+      decal TryTexture2              tex=rbxassetid://7807728404
+
+  [CHARACTER] PalaCraft7239   parts=18 (with mesh 0)  decals=1
+      part  RightFoot                mesh=                           tex=
+      part  UpperTorso               mesh=                           tex=
+      part  LowerTorso               mesh=                           tex=
+      part  RightUpperArm            mesh=                           tex=
+      part  RightLowerArm            mesh=                           tex=
+      part  RightHand                mesh=                           tex=
+      part  Handle                   mesh=                           tex=
+      part  LeftUpperArm             mesh=                           tex=
+      part  LeftLowerArm             mesh=                           tex=
+      part  LeftHand                 mesh=                           tex=
+      part  LeftUpperLeg             mesh=                           tex=
+      part  LeftLowerLeg             mesh=                           tex=
+      part  LeftFoot                 mesh=                           tex=
+      part  RightUpperLeg            mesh=                           tex=
+      part  RightLowerLeg            mesh=                           tex=
+      part  Handle                   mesh=                           tex=
+      part  Handle                   mesh=                           tex=
+      part  Head                     mesh=                           tex=
+      decal face                     tex=
+
+  [CHARACTER] ViewModelOld   parts=10 (with mesh 0)  decals=0
+      part  LeftHand                 mesh=                           tex=
+      part  LeftLowerArm             mesh=                           tex=
+      part  FakeHand                 mesh=                           tex=
+      part  LeftUpperArm             mesh=                           tex=
+      part  RightHand                mesh=                           tex=
+      part  RightLowerArm            mesh=                           tex=
+      part  FakeHand                 mesh=                           tex=
+      part  RightUpperArm            mesh=                           tex=
+      part  UpperTorso               mesh=                           tex=
+      part  LowerTorso               mesh=                           tex=
+
+  [CHARACTER] ViewModel   parts=14 (with mesh 0)  decals=0
+      part  LeftHand                 mesh=                           tex=
+      part  LeftLowerArm             mesh=                           tex=
+      part  LeftUpperArm             mesh=                           tex=
+      part  RightHand                mesh=                           tex=
+      part  RightLowerArm            mesh=                           tex=
+      part  RightUpperArm            mesh=                           tex=
+      part  UpperTorso               mesh=                           tex=
+      part  LeftFoot                 mesh=                           tex=
+      part  LeftLowerLeg             mesh=                           tex=
+      part  LeftUpperLeg             mesh=                           tex=
+      part  RightFoot                mesh=                           tex=
+      part  RightLowerLeg            mesh=                           tex=
+      part  RightUpperLeg            mesh=                           tex=
+      part  LowerTorso               mesh=                           tex=
+
+  -> 581 model block(s), 5 character rig(s)
+
+========================================================================
+FILE: seek final 1.rbxmx   (13 MB)
+========================================================================
+
+  -> 730 model block(s), 0 character rig(s)
 
 ========================================================================
 FILE: seek start f2.rbxmx   (4.8 MB)
@@ -28,37 +223,44 @@ FILE: sewers 5 + figure.rbxmx   (5.7 MB)
 ========================================================================
 
   [CHARACTER] FigureRig   parts=32 (with mesh 31)  decals=0
-      part  Torso                    mesh=10494023258                tex=
-      part  RibCage                  mesh=10493991658                tex=
-      part  LeftMiddleLeg            mesh=10494026105                tex=
-      part  Blister                  mesh=10494027006                tex=
+      part  Torso                    mesh=rbxassetid://10494023258   tex=
+      part  RibCage                  mesh=rbxassetid://10493991658   tex=
+      part  LeftMiddleLeg            mesh=rbxassetid://10494026105   tex=
+      part  Blister                  mesh=rbxassetid://10494027006   tex=
       part  Root                     mesh=                           tex=
-      part  Head                     mesh=10494022570                tex=
-      part  Blisters                 mesh=10494023013                tex=
-      part  Gums                     mesh=10494022876                tex=
-      part  Veins                    mesh=10494023182                tex=
-      part  Teeth                    mesh=10494022710                tex=
-      part  LeftUpperArm             mesh=10494024471                tex=
-      part  RightUpperArm            mesh=10494024735                tex=
-      part  Blister                  mesh=10494023534                tex=
-      part  RightUpperLeg            mesh=10494025881                tex=
-      part  LeftUpperLeg             mesh=10494025735                tex=
-      part  Blister                  mesh=10494025608                tex=
-      part  LeftHand                 mesh=10494023744                tex=
-      part  LeftLowerArm             mesh=10494023932                tex=
-      part  Blister                  mesh=10494024108                tex=
-      part  LeftMiddleArm            mesh=10494024216                tex=
-      part  Blister                  mesh=10494024341                tex=
-      part  RightHand                mesh=10494025102                tex=
-      part  RightLowerArm            mesh=10494024975                tex=
-      part  Blister                  mesh=10494025231                tex=
-      part  RightMiddleArm           mesh=10494024868                tex=
-      part  RightFoot                mesh=10494026632                tex=
-      part  RightLowerLeg            mesh=10494026427                tex=
-      part  Blister                  mesh=10494027198                tex=
-      part  RightMiddleLeg           mesh=10494025972                tex=
-      part  Blister                  mesh=10494027087                tex=
-      part  LeftFoot                 mesh=10494026794                tex=
-      part  LeftLowerLeg             mesh=10494026266                tex=
+      part  Head                     mesh=rbxassetid://10494022570   tex=
+      part  Blisters                 mesh=rbxassetid://10494023013   tex=
+      part  Gums                     mesh=rbxassetid://10494022876   tex=
+      part  Veins                    mesh=rbxassetid://10494023182   tex=
+      part  Teeth                    mesh=rbxassetid://10494022710   tex=
+      part  LeftUpperArm             mesh=rbxassetid://10494024471   tex=
+      part  RightUpperArm            mesh=rbxassetid://10494024735   tex=
+      part  Blister                  mesh=rbxassetid://10494023534   tex=
+      part  RightUpperLeg            mesh=rbxassetid://10494025881   tex=
+      part  LeftUpperLeg             mesh=rbxassetid://10494025735   tex=
+      part  Blister                  mesh=rbxassetid://10494025608   tex=
+      part  LeftHand                 mesh=rbxassetid://10494023744   tex=
+      part  LeftLowerArm             mesh=rbxassetid://10494023932   tex=
+      part  Blister                  mesh=rbxassetid://10494024108   tex=
+      part  LeftMiddleArm            mesh=rbxassetid://10494024216   tex=
+      part  Blister                  mesh=rbxassetid://10494024341   tex=
+      part  RightHand                mesh=rbxassetid://10494025102   tex=
+      part  RightLowerArm            mesh=rbxassetid://10494024975   tex=
+      part  Blister                  mesh=rbxassetid://10494025231   tex=
+      part  RightMiddleArm           mesh=rbxassetid://10494024868   tex=
+      part  RightFoot                mesh=rbxassetid://10494026632   tex=
+      part  RightLowerLeg            mesh=rbxassetid://10494026427   tex=
+      part  Blister                  mesh=rbxassetid://10494027198   tex=
+      part  RightMiddleLeg           mesh=rbxassetid://10494025972   tex=
+      part  Blister                  mesh=rbxassetid://10494027087   tex=
+      part  LeftFoot                 mesh=rbxassetid://10494026794   tex=
+      part  LeftLowerLeg             mesh=rbxassetid://10494026266   tex=
 
   -> 363 model block(s), 1 character rig(s)
+
+========================================================================
+FILE: seg0.bin   (5.7 MB)
+========================================================================
+  INCOMPLETE FILE: truncated download
+
+  -> 204 model block(s), 0 character rig(s)
