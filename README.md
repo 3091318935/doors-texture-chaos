@@ -17,9 +17,9 @@ DOORS 是服务器端体验，它的角色模型不会下发到客户端，**没
 
 > **你自己导入到 place 里的模型，它负责把它们之间乱换。**
 
-获取模型的几条正路写在 [docs/获取建模.md](docs/获取建模.md)：
+获取模型的几条正路写在 [docs/models.md](docs/models.md)：
 
-- **社区解包仓库**：[Palayop7239/DoorsFiles](https://github.com/Palayop7239/DoorsFiles) —— 解包好的 `.rbxm` 直接 `Insert from File`；完整文件清单和直链见 [docs/资产清单.md](docs/资产清单.md)
+- **社区解包仓库**：[Palayop7239/DoorsFiles](https://github.com/Palayop7239/DoorsFiles) —— 解包好的 `.rbxm` 直接 `Insert from File`；完整文件清单和直链见 [docs/assets-manifest.md](docs/assets-manifest.md)
 - **Roblox 工具箱**：搜 `DOORS Rush` / `DOORS Figure` / `DOORS entity rig`
 - **Sketchfab**：同人模型走 Studio 3D Importer
 - **自己搭 rig**：规格统一，`perMonster` 换皮效果最好
@@ -136,10 +136,10 @@ doors-texture-chaos/
 ├── models/
 │   └── FigureRig.build.lua         一键在 Studio 里重建 DOORS 的 Figure（32 部件，真实 MeshId + 姿态）
 ├── docs/
-│   ├── 获取建模.md                  模型从哪来（解包仓库 / 工具箱 / Sketchfab / saveinstance）
-│   ├── 资产清单.md                  解包仓库 69 个文件的完整清单 + 直链
-│   ├── 实测记录.md                  实测扫出来的东西 + Roblox XML 的三个格式坑
-│   └── 实体清单.md                  DOORS 实体名单与命名建议
+│   ├── models.md                    模型从哪来（解包仓库 / 工具箱 / Sketchfab / saveinstance）
+│   ├── assets-manifest.md           解包仓库 69 个文件的完整清单 + 直链
+│   ├── field-notes.md               实测扫出来的东西 + Roblox XML 的三个格式坑
+│   └── entities.md                  DOORS 实体名单与命名建议
 └── tools/
     ├── fetch-and-extract.ps1       下存档（3 镜像重试 + 完整性校验）然后自动提取
     ├── extract-assets.ps1          从 .rbxlx/.rbxmx 里挖角色 rig 和资产 id
