@@ -134,7 +134,17 @@ doors-texture-chaos/
 │   └── StarterPlayer/
 │       └── ChaosHud.client.lua     左上角结果 HUD（F7 开关）
 ├── models/
-│   └── FigureRig.build.lua         一键在 Studio 里重建 DOORS 的 Figure（32 部件，真实 MeshId + 姿态）
+│   ├── README.md                   每个重建脚本的来源与部件清单
+│   ├── ALL-IN-ONE.build.lua        Figure + Seek + Glitch + Giggle + Rush（一次粘完）
+│   ├── SHOP-PACK.build.lua         ElGoblino + Bob + Timothy + FigureFull + FigureWelded
+│   ├── FigureRig.build.lua         Figure：31 网格（无贴图）
+│   ├── EntityRigs.build.lua        Seek 15 + Glitch 6 + Giggle 21（都带贴图）
+│   ├── FigureFull.build.lua        Figure 完整版：53 部件 + 3 张贴图
+│   ├── FigureWelded.build.lua      Figure welded 变体：32 部件 + 2 张贴图
+│   ├── ElGoblino.build.lua         El Goblino：31 部件
+│   ├── Bob.build.lua               Bob（SkellyFriend）：20 部件
+│   ├── Timothy.build.lua           Timothy（Spider）：11 部件
+│   └── RushTextures.build.lua      Rush 的 3 张贴图板
 ├── docs/
 │   ├── models.md                    模型从哪来（解包仓库 / 工具箱 / Sketchfab / saveinstance）
 │   ├── assets-manifest.md           解包仓库 69 个文件的完整清单 + 直链
@@ -189,6 +199,26 @@ Decal 位置由模型自己的 Head 部件决定，换贴图不改位置；飘�
 确认文件夹名和 `Config.FolderName` 一致，且每个生物是 **Model**（不是散落的 Part）。
 
 ---
+
+## raw 域名被墙 / 拉不动的时候
+
+`raw.githubusercontent.com` 在部分网络下会被 TLS RST（本机实测：DNS 解析正常 185.199.108.133，但 HTTPS 连接被重置）。
+执行器里的 `game:HttpGet` 是从**你的机器**发请求，所以同样拉不到。换这两个域名：
+
+```lua
+-- gh-proxy（实测可用：本机与 agent 侧都取到了 200）
+loadstring(game:HttpGet("https://gh-proxy.com/https://raw.githubusercontent.com/3091318935/doors-texture-chaos/main/standalone/DoorsTextureChaos.lua"))()
+
+-- 备用镜像（同样格式，换前缀即可，未逐个实测）
+-- https://ghfast.top/https://raw.githubusercontent.com/...
+-- https://ghproxy.net/https://raw.githubusercontent.com/...
+```
+
+克隆整个仓库同理 —— `github.com` 和 `api.github.com` 都没被拦（`git ls-remote` 实测通），只有 raw 那台机器不通：
+
+```bash
+git clone https://github.com/3091318935/doors-texture-chaos
+```
 
 ## 上传到 GitHub
 
