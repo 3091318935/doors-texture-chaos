@@ -1,0 +1,28 @@
+# Roblox 构建产物（rojo build）
+build/
+*.rbxl
+*.rbxlx
+*.rbxm
+*.rbxmx
+*.rbxmk.lock
+
+# Rojo 生成
+sourcemap.json
+*.project.json.bak
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 本地样本与截图（模型文件一般上百 MB，别塞仓库）
+samples/
+*.png
+!docs/*.png
+
+# 密钥 / 令牌
+.env
+.env.*
+*.token
