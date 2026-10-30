@@ -1,0 +1,64 @@
+﻿
+========================================================================
+FILE: gaz + gloombats.rbxmx.part   (2.6 MB)
+========================================================================
+  READ FAILED: The process cannot access the file 'D:\DSH ROBLOX\doors_downloads\gaz + gloombats.rbxmx.part' because it is being used by another process.
+
+========================================================================
+FILE: halt floor 2.rbxmx   (2.8 MB)
+========================================================================
+
+  -> 192 model block(s), 0 character rig(s)
+
+========================================================================
+FILE: new halt floor 1.rbxlx   (3.3 MB)
+========================================================================
+  INCOMPLETE FILE: truncated download
+
+  -> 456 model block(s), 0 character rig(s)
+
+========================================================================
+FILE: seek start f2.rbxmx   (4.8 MB)
+========================================================================
+
+  -> 317 model block(s), 0 character rig(s)
+
+========================================================================
+FILE: sewers 5 + figure.rbxmx   (5.7 MB)
+========================================================================
+
+  [CHARACTER] FigureRig   parts=32 (with mesh 31)  decals=0
+      part  Torso                    mesh=10494023258                tex=
+      part  RibCage                  mesh=10493991658                tex=
+      part  LeftMiddleLeg            mesh=10494026105                tex=
+      part  Blister                  mesh=10494027006                tex=
+      part  Root                     mesh=                           tex=
+      part  Head                     mesh=10494022570                tex=
+      part  Blisters                 mesh=10494023013                tex=
+      part  Gums                     mesh=10494022876                tex=
+      part  Veins                    mesh=10494023182                tex=
+      part  Teeth                    mesh=10494022710                tex=
+      part  LeftUpperArm             mesh=10494024471                tex=
+      part  RightUpperArm            mesh=10494024735                tex=
+      part  Blister                  mesh=10494023534                tex=
+      part  RightUpperLeg            mesh=10494025881                tex=
+      part  LeftUpperLeg             mesh=10494025735                tex=
+      part  Blister                  mesh=10494025608                tex=
+      part  LeftHand                 mesh=10494023744                tex=
+      part  LeftLowerArm             mesh=10494023932                tex=
+      part  Blister                  mesh=10494024108                tex=
+      part  LeftMiddleArm            mesh=10494024216                tex=
+      part  Blister                  mesh=10494024341                tex=
+      part  RightHand                mesh=10494025102                tex=
+      part  RightLowerArm            mesh=10494024975                tex=
+      part  Blister                  mesh=10494025231                tex=
+      part  RightMiddleArm           mesh=10494024868                tex=
+      part  RightFoot                mesh=10494026632                tex=
+      part  RightLowerLeg            mesh=10494026427                tex=
+      part  Blister                  mesh=10494027198                tex=
+      part  RightMiddleLeg           mesh=10494025972                tex=
+      part  Blister                  mesh=10494027087                tex=
+      part  LeftFoot                 mesh=10494026794                tex=
+      part  LeftLowerLeg             mesh=10494026266                tex=
+
+  -> 363 model block(s), 1 character rig(s)
