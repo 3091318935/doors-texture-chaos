@@ -217,8 +217,16 @@ local RIGS = {
 --==============================================================================
 
 local Workspace = game:GetService("Workspace")
-local Selection = game:GetService("Selection")
-local ChangeHistoryService = game:GetService("ChangeHistoryService")
+
+-- 同 FigureRig：Studio 专属服务必须 pcall 包住，执行器里没有 Selection
+local Selection = nil
+pcall(function()
+	Selection = game:GetService("Selection")
+end)
+local ChangeHistoryService = nil
+pcall(function()
+	ChangeHistoryService = game:GetService("ChangeHistoryService")
+end)
 
 local function buildRig(def, folder, placeAt)
 	-- 重心：只算有 CFrame 的部件；没有 CFrame 的部件放到重心上
@@ -316,9 +324,7 @@ if recording then
 	end)
 end
 
-pcall(function()
-	Selection:Set(built)
-end)
+pcall(function() Selection:Set(built) end)
 
 print("[EntityRigs] 完成。Seek / Glitch / Giggle 各带 1-2 张贴图，其余部件是素模")
 print("[EntityRigs] 下一步：跑 standalone/DoorsTextureChaos.lua，模式 chaos 最能看出贴图乱飞")
