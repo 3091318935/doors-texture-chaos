@@ -417,6 +417,51 @@ end
 -- 入口
 --==============================================================================
 
+-- 执行器里没有输出台，"没反应"和"跑了但没找到东西"看起来一模一样。
+-- 所以关键节点直接在屏幕上弹一条，8 秒后自动消失。
+local function notify(message)
+	pcall(function()
+		local player = game:GetService("Players").LocalPlayer
+		if not player then
+			return
+		end
+		local playerGui = player:FindFirstChild("PlayerGui")
+		if not playerGui then
+			return
+		end
+
+		local old = playerGui:FindFirstChild("DoorsChaosToast")
+		if old then
+			old:Destroy()
+		end
+
+		local screen = Instance.new("ScreenGui")
+		screen.Name = "DoorsChaosToast"
+		screen.ResetOnSpawn = false
+		screen.DisplayOrder = 90
+
+		local label = Instance.new("TextLabel")
+		label.Size = UDim2.new(0, 520, 0, 64)
+		label.Position = UDim2.new(0.5, -260, 0, 40)
+		label.BackgroundColor3 = Color3.fromRGB(18, 18, 22)
+		label.BackgroundTransparency = 0.12
+		label.BorderSizePixel = 0
+		label.TextColor3 = Color3.fromRGB(255, 200, 90)
+		label.Font = Enum.Font.GothamBold
+		label.TextSize = 15
+		label.TextWrapped = true
+		label.Text = message
+		label.Parent = screen
+
+		screen.Parent = playerGui
+		task.delay(8, function()
+			pcall(function()
+				screen:Destroy()
+			end)
+		end)
+	end)
+end
+
 local function resolveFolder()
 	local workspaceService = game:GetService("Workspace")
 	local folder = workspaceService:FindFirstChild(CONFIG.folderName)
@@ -435,12 +480,14 @@ end
 local function runOnce()
 	local root = resolveFolder()
 	if not root then
+		notify(string.format("找不到 Workspace.%s（也没选中模型）", CONFIG.folderName))
 		warn(string.format("[乱斗] 找不到 Workspace.%s，也没选中任何模型", CONFIG.folderName))
 		return nil
 	end
 
 	local monsters = harvest(root)
 	if #monsters == 0 then
+		notify(string.format("%s 里没有带贴图的模型", root.Name))
 		warn("[乱斗] 这个文件夹里没有带贴图的模型")
 		return nil
 	end
@@ -461,6 +508,7 @@ local function runOnce()
 	local changed = applyPlan(plan)
 	print(report(plan))
 	print(string.format("[乱斗] 实际写入 %d 处。要还原：CONFIG.action = \"restore\" 再跑一次，或直接 Ctrl+Z。", changed))
+	notify(string.format("乱斗完成：%d 只生物，%d 处替换（种子 %d）", #monsters, changed, plan.seed))
 
 	return { monsters = monsters, plan = plan }
 end
