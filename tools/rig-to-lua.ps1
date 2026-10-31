@@ -157,8 +157,17 @@ $footer = @"
 local DECAL = $decalLua
 
 local Workspace = game:GetService("Workspace")
-local Selection = game:GetService("Selection")
-local ChangeHistoryService = game:GetService("ChangeHistoryService")
+
+-- Selection / ChangeHistoryService only exist in Studio; getService throws
+-- inside an executor and would kill the whole script on its first line
+local Selection = nil
+pcall(function()
+	Selection = game:GetService("Selection")
+end)
+local ChangeHistoryService = nil
+pcall(function()
+	ChangeHistoryService = game:GetService("ChangeHistoryService")
+end)
 
 local sum, count = Vector3.zero, 0
 for _, row in ipairs(PARTS) do
@@ -181,7 +190,9 @@ if old then old:Destroy() end
 
 local recording
 pcall(function()
-	recording = ChangeHistoryService:TryBeginRecording("Build " .. CONFIG.modelName)
+	if ChangeHistoryService then
+		recording = ChangeHistoryService:TryBeginRecording("Build " .. CONFIG.modelName)
+	end
 end)
 
 local model = Instance.new("Model")
@@ -238,8 +249,12 @@ print(string.format("[%s] %d parts -> %s", CONFIG.modelName, #PARTS, model:GetFu
 
 $lua = $header + "`r`n" + ($rowsOut -join "`r`n") + "`r`n" + $footer
 
+# normalize to CRLF: the here-strings above inherit this file's own newlines
+$lua = $lua -replace "(?<!`r)`n", "`r`n"
+
 $dir = Split-Path -Parent $Out
 if ($dir -and -not (Test-Path -LiteralPath $dir)) { New-Item -ItemType Directory -Force -Path $dir | Out-Null }
+if (-not $lua.EndsWith("`r`n")) { $lua += "`r`n" }
 [System.IO.File]::WriteAllText($Out, $lua, $utf8)
 
 Write-Host ("rig '{0}': {1} parts, {2} decal id(s)" -f $Rig, $partCount, $decalIds.Count) -ForegroundColor Green
