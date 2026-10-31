@@ -52,8 +52,17 @@ local PARTS = {
 local DECAL = { part = "Head", texture = "rbxassetid://2542432117" }
 
 local Workspace = game:GetService("Workspace")
-local Selection = game:GetService("Selection")
-local ChangeHistoryService = game:GetService("ChangeHistoryService")
+
+-- Selection / ChangeHistoryService only exist in Studio; getService throws
+-- inside an executor and would kill the whole script on its first line
+local Selection = nil
+pcall(function()
+	Selection = game:GetService("Selection")
+end)
+local ChangeHistoryService = nil
+pcall(function()
+	ChangeHistoryService = game:GetService("ChangeHistoryService")
+end)
 
 local sum, count = Vector3.zero, 0
 for _, row in ipairs(PARTS) do
@@ -76,7 +85,9 @@ if old then old:Destroy() end
 
 local recording
 pcall(function()
-	recording = ChangeHistoryService:TryBeginRecording("Build " .. CONFIG.modelName)
+	if ChangeHistoryService then
+		recording = ChangeHistoryService:TryBeginRecording("Build " .. CONFIG.modelName)
+	end
 end)
 
 local model = Instance.new("Model")
