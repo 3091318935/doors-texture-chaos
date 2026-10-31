@@ -38,8 +38,15 @@ local TEXTURES = {
 }
 
 local Workspace = game:GetService("Workspace")
-local Selection = game:GetService("Selection")
-local ChangeHistoryService = game:GetService("ChangeHistoryService")
+
+local Selection = nil
+pcall(function()
+	Selection = game:GetService("Selection")
+end)
+local ChangeHistoryService = nil
+pcall(function()
+	ChangeHistoryService = game:GetService("ChangeHistoryService")
+end)
 
 local recording
 pcall(function()
@@ -93,9 +100,7 @@ if recording then
 	end)
 end
 
-pcall(function()
-	Selection:Set({ model })
-end)
+pcall(function() Selection:Set({ model }) end)
 
 print(string.format("[RushTextures] 生成 %d 块贴图板 -> %s", #TEXTURES, model:GetFullName()))
 print("[RushTextures] 贴图空白 = 资产没权限；三张 id 已写进 OriginalTexture 属性")
