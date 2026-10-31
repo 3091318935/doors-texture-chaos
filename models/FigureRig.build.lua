@@ -73,8 +73,17 @@ local PARTS = {
 --==============================================================================
 
 local Workspace = game:GetService("Workspace")
-local Selection = game:GetService("Selection")
-local ChangeHistoryService = game:GetService("ChangeHistoryService")
+
+-- Selection / ChangeHistoryService 只在 Studio 里有；执行器里 getService 会直接报错，
+-- 所以必须包 pcall，否则整个脚本第一行就死了
+local Selection = nil
+pcall(function()
+	Selection = game:GetService("Selection")
+end)
+local ChangeHistoryService = nil
+pcall(function()
+	ChangeHistoryService = game:GetService("ChangeHistoryService")
+end)
 
 local recording
 pcall(function()
@@ -138,9 +147,7 @@ if recording then
 	end)
 end
 
-pcall(function()
-	Selection:Set({ model })
-end)
+pcall(function() Selection:Set({ model }) end)
 
 print(string.format("[FigureRig] 重建 %d 个 MeshPart（跳过 %d 个无网格部件）-> %s", built, skipped, model:GetFullName()))
 print("[FigureRig] 显示成方块 = 网格资产没权限；贴图本来就没有（原 dump TextureID=0、Decal=0）")
