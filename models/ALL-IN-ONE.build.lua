@@ -79,8 +79,17 @@ local PARTS = {
 --==============================================================================
 
 local Workspace = game:GetService("Workspace")
-local Selection = game:GetService("Selection")
-local ChangeHistoryService = game:GetService("ChangeHistoryService")
+
+-- Selection / ChangeHistoryService 只在 Studio 里有；执行器里 getService 会直接报错，
+-- 所以必须包 pcall，否则整个脚本第一行就死了
+local Selection = nil
+pcall(function()
+	Selection = game:GetService("Selection")
+end)
+local ChangeHistoryService = nil
+pcall(function()
+	ChangeHistoryService = game:GetService("ChangeHistoryService")
+end)
 
 local recording
 pcall(function()
@@ -144,9 +153,7 @@ if recording then
 	end)
 end
 
-pcall(function()
-	Selection:Set({ model })
-end)
+pcall(function() Selection:Set({ model }) end)
 
 print(string.format("[FigureRig] 重建 %d 个 MeshPart（跳过 %d 个无网格部件）-> %s", built, skipped, model:GetFullName()))
 print("[FigureRig] 显示成方块 = 网格资产没权限；贴图本来就没有（原 dump TextureID=0、Decal=0）")
@@ -373,8 +380,16 @@ local RIGS = {
 --==============================================================================
 
 local Workspace = game:GetService("Workspace")
-local Selection = game:GetService("Selection")
-local ChangeHistoryService = game:GetService("ChangeHistoryService")
+
+-- 同 FigureRig：Studio 专属服务必须 pcall 包住，执行器里没有 Selection
+local Selection = nil
+pcall(function()
+	Selection = game:GetService("Selection")
+end)
+local ChangeHistoryService = nil
+pcall(function()
+	ChangeHistoryService = game:GetService("ChangeHistoryService")
+end)
 
 local function buildRig(def, folder, placeAt)
 	-- 重心：只算有 CFrame 的部件；没有 CFrame 的部件放到重心上
@@ -472,9 +487,7 @@ if recording then
 	end)
 end
 
-pcall(function()
-	Selection:Set(built)
-end)
+pcall(function() Selection:Set(built) end)
 
 print("[EntityRigs] 完成。Seek / Glitch / Giggle 各带 1-2 张贴图，其余部件是素模")
 print("[EntityRigs] 下一步：跑 standalone/DoorsTextureChaos.lua，模式 chaos 最能看出贴图乱飞")
@@ -521,8 +534,15 @@ local TEXTURES = {
 }
 
 local Workspace = game:GetService("Workspace")
-local Selection = game:GetService("Selection")
-local ChangeHistoryService = game:GetService("ChangeHistoryService")
+
+local Selection = nil
+pcall(function()
+	Selection = game:GetService("Selection")
+end)
+local ChangeHistoryService = nil
+pcall(function()
+	ChangeHistoryService = game:GetService("ChangeHistoryService")
+end)
 
 local recording
 pcall(function()
@@ -576,12 +596,8 @@ if recording then
 	end)
 end
 
-pcall(function()
-	Selection:Set({ model })
-end)
+pcall(function() Selection:Set({ model }) end)
 
 print(string.format("[RushTextures] 生成 %d 块贴图板 -> %s", #TEXTURES, model:GetFullName()))
 print("[RushTextures] 贴图空白 = 资产没权限；三张 id 已写进 OriginalTexture 属性")
 print("[RushTextures] 下一步：跑 standalone/DoorsTextureChaos.lua，模式用 chaos 最能看出效果")
-
-
